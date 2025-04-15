@@ -65,6 +65,33 @@
     line-height: 1.6;
     color: #555;
     }
+    .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .skill-tab {
+    background-color: #f0f4ff;
+    color: #003366;
+    border: 1px solid #cce0ff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+
+  .skill-tab:hover {
+    background-color: #e0ecff;
+    transform: scale(1.05);
+    cursor: default;
+  }
     .video-container {
       text-align: center;
       margin-top: 40px;
@@ -118,15 +145,22 @@ Over the course of my journey at TCS, I’ve architected and optimized modules f
 
   <h2>Experience Highlights</h2>
   <div class="card">
- <strong>TCS - 08/2022 to Present </strong><br>
+ <strong>TCS - 08/2022 to Present </strong><br><br>
   <div class="card">
     <strong>American Airlines</strong><br>
-    - Developed APIs to manage cabin crew configurations using custom validators and robust validation logic, improving system reliability and data accuracy.<br>
-    - Optimized complex database queries, resulting in a 40% boost in performance.<br>
-    - Implemented secure authentication using JWT and OAuth 2.0.<br>
-    - Also contributed to containerized deployments using Docker and Kubernetes, ensuring smooth and consistent delivery across development and production environments.<br>
-    - Java 8 to 21 Migration, and Fixing Critical Vulnerabilities <br>
+  <div class="project-card">
+  <h3>🛫 Flight Allocation & Crew Configuration System</h3>
+  <p>
+    Designed and developed scalable, modular APIs to manage cabin crew configurations with custom validation pipelines, ensuring data accuracy and system reliability across multiple services.
+    Led performance optimization of complex MongoDB queries, resulting in a 40% boost in responsiveness and throughput.
+    Implemented secure, stateless authentication using JWT and OAuth 2.0 to ensure safe access across distributed service layers.
+    Migrated legacy codebase from Java 8 to Java 21, modernizing the backend while replacing deprecated patterns for future-proof compatibility.
+    Played a key role in containerized deployments using Docker and Kubernetes, improving CI/CD efficiency and ensuring consistent environment parity across dev, staging, and production.
+    Actively contributed to resolving critical vulnerabilities (CVEs), strengthening overall system security posture in production.
+  </p>
   </div>
+  </div>
+    
   <div class="card">
     <strong>Ingram Micro - Xvantage</strong><br>
     <div class="project-card">
@@ -165,8 +199,55 @@ Over the course of my journey at TCS, I’ve architected and optimized modules f
 
   <h2>Skills</h2>
   <div class="card">
-    Java, Spring Boot, Angular, Kafka, Docker, MongoDB, Python<br>
-    GCP, AWS, DevOps, PostgreSQL, DSA, HLD/LLD, React, Vue
+   <div class="skills-container">
+  <!-- Programming Languages -->
+  <div class="skill-tab">Java</div>
+  <div class="skill-tab">C++</div>
+  <div class="skill-tab">C</div>
+  <div class="skill-tab">Python</div>
+  <div class="skill-tab">JavaScript</div>
+  <div class="skill-tab">PHP</div>
+
+  <!-- Frameworks & Libraries -->
+  <div class="skill-tab">Spring Boot</div>
+  <div class="skill-tab">Spring Security</div>
+  <div class="skill-tab">Spring Batch</div>
+  <div class="skill-tab">JPA</div>
+  <div class="skill-tab">JDBC</div>
+  <div class="skill-tab">Angular</div>
+  <div class="skill-tab">React</div>
+  <div class="skill-tab">Vue.js</div>
+  <div class="skill-tab">Nuxt.js</div>
+  <div class="skill-tab">Node.js</div>
+  <div class="skill-tab">.NET</div>
+
+  <!-- DevOps & Cloud -->
+  <div class="skill-tab">Docker</div>
+  <div class="skill-tab">Kubernetes</div>
+  <div class="skill-tab">Jenkins</div>
+  <div class="skill-tab">Azure</div>
+  <div class="skill-tab">GCP</div>
+  <div class="skill-tab">AWS</div>
+
+  <!-- Databases -->
+  <div class="skill-tab">PostgreSQL</div>
+  <div class="skill-tab">MongoDB</div>
+  <div class="skill-tab">MySQL</div>
+  <div class="skill-tab">Firebase</div>
+
+  <!-- Concepts / Tools -->
+  <div class="skill-tab">Kafka</div>
+  <div class="skill-tab">Apache Kafka</div>
+  <div class="skill-tab">OAuth 2.0</div>
+  <div class="skill-tab">JWT</div>
+  <div class="skill-tab">Design Patterns</div>
+  <div class="skill-tab">HLD / LLD</div>
+  <div class="skill-tab">DSA</div>
+  <div class="skill-tab">OS</div>
+  <div class="skill-tab">CN</div>
+  <div class="skill-tab">IoT</div>
+  <div class="skill-tab">AI / ML</div>
+  </div>
   </div>
 
   <h2>Certifications & Awards</h2>

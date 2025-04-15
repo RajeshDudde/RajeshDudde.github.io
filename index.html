@@ -50,6 +50,21 @@
      color: #00ffff;
      transition: 0.3s ease;
     }
+    .project-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .project-card h3 {
+       margin-top: 0;
+       color: #333;
+    }
+    .project-card p {
+    line-height: 1.6;
+    color: #555;
+    }
     .video-container {
       text-align: center;
       margin-top: 40px;
@@ -103,15 +118,50 @@ Over the course of my journey at TCS, I’ve architected and optimized modules f
 
   <h2>Experience Highlights</h2>
   <div class="card">
-    <strong>TCS - American Airlines</strong><br>
-    - Optimized Flight Allocation System (40% Query Improvement)<br>
-    - Java 8 to 21 Migration, JWT OAuth 2.0, Docker + Kubernetes<br>
+ <strong>TCS - 08/2022 to Present </strong><br>
+  <div class="card">
+    <strong>American Airlines</strong><br>
+    - Developed APIs to manage cabin crew configurations using custom validators and robust validation logic, improving system reliability and data accuracy.<br>
+    - Optimized complex database queries, resulting in a 40% boost in performance.<br>
+    - Implemented secure authentication using JWT and OAuth 2.0.<br>
+    - Also contributed to containerized deployments using Docker and Kubernetes, ensuring smooth and consistent delivery across development and production environments.<br>
+    - Java 8 to 21 Migration, and Fixing Critical Vulnerabilities <br>
   </div>
   <div class="card">
     <strong>Ingram Micro - Xvantage</strong><br>
-    - B2B Integration, OMS Optimization (80% Faster)<br>
-    - Automated Approval Workflow, GCP Storage<br>
+    <div class="project-card">
+  <h3>🧩 Vendor Configuration Management System</h3>
+  <p>
+    Architected and implemented an integration layer between vendor systems and the marketplace’s back-office database using Tibco middleware.
+    Designed a robust aggregation and deduplication pipeline to eliminate configuration inconsistencies.
+    Leveraged Google Cloud Bucket for automated, scalable storage and retrieval of processed data.
+    This solution reduced data discrepancies and processing time by 30%, significantly improving data accuracy across the platform.
+  </p>
+</div>
+
+<div class="project-card">
+  <h3>📦 Order Management System (OMS)</h3>
+  <p>
+    Played a key role in the design and development of a high-throughput OMS capable of handling over 100,000 concurrent orders.
+    Engineered asynchronous processing flows and optimized PostgreSQL queries using JDBC Template, resulting in an 80% drop in processing time.
+    Applied principles of horizontal scalability and modular service design to improve system resilience and maintainability.
+    Achieved a 55% improvement in overall API response times through fine-tuned indexing and parallel processing strategies.
+  </p>
+</div>
+
+<div class="project-card">
+  <h3>✅ Discount Approval System</h3>
+  <p>
+    Designed a rule-driven, modular approval engine to automate discount workflows based on vendor revenue and profitability metrics.
+    Integrated real-time data handling using Pub/Sub and enabled batch processing for Excel-based uploads and external API calls.
+    Built a scalable architecture supporting 64+ distinct approval types with configurable auto/manual logic.
+    Developed a notification subsystem to keep vendors and approvers informed throughout the workflow.
+    Reduced manual effort by 50% and improved turnaround time by 40%, while leading a 3-member team and achieving 95% test coverage.
+  </p>
+</div>
+
   </div>
+   </div>
 
   <h2>Skills</h2>
   <div class="card">

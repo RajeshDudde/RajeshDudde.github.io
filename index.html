@@ -1,5 +1,122 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rajesh Dudde | Java Architect Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f2027;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(90deg, #2c5364, #203a43, #0f2027);
+      padding: 60px 30px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      animation: fadeInDown 2s ease;
+    }
+    header p {
+      font-size: 1.2em;
+      animation: fadeInUp 2s ease;
+    }
+    section {
+      padding: 50px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .fade-in {
+      animation: fadeIn 2s ease;
+    }
+    .card {
+      background: #1f2e35;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .video-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .video-container iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
 <body>
-<h1> Hello Rajesh</h1>
+
+<header>
+  <h1>Rajesh Dudde</h1>
+  <p>Aspiring Java Architect | Cloud Certified | 2.9+ Years Experience</p>
+</header>
+
+<section class="fade-in">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I am committed to mastering advanced Java architectural principles and solving real-world challenges using scalable, innovative designs. With deep technical knowledge and hands-on experience, I aim to make a lasting impact in the software industry.</p>
+  </div>
+
+  <h2>Experience Highlights</h2>
+  <div class="card">
+    <strong>TCS - American Airlines</strong><br>
+    - Optimized Flight Allocation System (40% Query Improvement)<br>
+    - Java 8 to 21 Migration, JWT OAuth 2.0, Docker + Kubernetes<br>
+  </div>
+  <div class="card">
+    <strong>Ingram Micro - Xvantage</strong><br>
+    - B2B Integration, OMS Optimization (80% Faster)<br>
+    - Automated Approval Workflow, GCP Storage<br>
+  </div>
+
+  <h2>Skills</h2>
+  <div class="card">
+    Java, Spring Boot, Angular, Kafka, Docker, MongoDB, Python<br>
+    GCP, AWS, DevOps, PostgreSQL, DSA, HLD/LLD, React, Vue
+  </div>
+
+  <h2>Certifications & Awards</h2>
+  <div class="card">
+    Google ACE, AWS Cloud Practitioner, Generative AI (Google)<br>
+    Star of the Quarter, Best Team Award, Coding Rank: 57
+  </div>
+
+  <div class="video-container">
+    <h2>Watch My Portfolio Animation</h2>
+    <!-- Replace the src below with your YouTube or local video URL -->
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+  </div>
+</section>
+
 </body>
 </html>

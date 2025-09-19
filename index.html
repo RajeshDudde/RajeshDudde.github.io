@@ -86,6 +86,7 @@
       display: none;
     }
 
+    /* Skills section */
     .skills-container {
       display: flex;
       flex-wrap: wrap;
@@ -115,10 +116,12 @@
       text-align: center;
       font-size: 28px;
       font-weight: bold;
-      color: #003366;
+      color: #fff;
       margin-top: 40px;
       margin-bottom: 20px;
     }
+
+    /* Certifications */
     .certifications-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -149,6 +152,8 @@
       color: #666;
       margin-top: 4px;
     }
+
+    /* Achievements */
     .trophy-section {
       max-width: 900px;
       margin: 40px auto;
@@ -168,6 +173,8 @@
       color: #444;
       line-height: 1.5;
     }
+
+    /* Video */
     .video-container {
       text-align: center;
       margin-top: 40px;
@@ -202,8 +209,7 @@
 </header>
 
 <nav style="background: #1a1a1a; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000;">
-  <div style="font-size: 1.5em; font-weight: bold; color: #fff;">
-  </div>
+  <div style="font-size: 1.5em; font-weight: bold; color: #fff;"></div>
   <div>
     <a href="https://www.instagram.com/mystic.hawk_10/" target="_blank" style="margin: 0 15px; text-decoration: none; color: #fff; font-weight: 500;">Instagram</a>
     <a href="https://leetcode.com/RajeshGoud/" target="_blank" style="margin: 0 15px; text-decoration: none; color: #fff; font-weight: 500;">LeetCode</a>
@@ -285,6 +291,57 @@ Over the course of my journey at TCS, I’ve architected and optimized modules f
     </div>
   </div>
 </section>
+
+<!-- Skills -->
+<h2 class="section-title">Skills</h2>
+<div class="skills-container">
+  <div class="skill-tab">Java 21</div>
+  <div class="skill-tab">Spring Boot</div>
+  <div class="skill-tab">Microservices</div>
+  <div class="skill-tab">Kafka</div>
+  <div class="skill-tab">Cassandra</div>
+  <div class="skill-tab">CockroachDB</div>
+  <div class="skill-tab">PostgreSQL</div>
+  <div class="skill-tab">MongoDB</div>
+  <div class="skill-tab">Docker</div>
+  <div class="skill-tab">Kubernetes</div>
+  <div class="skill-tab">Cloud (GCP, Azure)</div>
+  <div class="skill-tab">Tibco Middleware</div>
+  <div class="skill-tab">Git / CI/CD</div>
+  <div class="skill-tab">Agile / Scrum</div>
+</div>
+
+<!-- Certifications -->
+<h2 class="section-title">Certifications</h2>
+<div class="certifications-container">
+  <div class="cert-card">
+    <div class="cert-title">Oracle Certified Professional: Java SE</div>
+    <div class="cert-issuer">Oracle</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-title">Google Cloud Certified: Associate Cloud Engineer</div>
+    <div class="cert-issuer">Google</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-title">Spring Professional Certification</div>
+    <div class="cert-issuer">VMware</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-title">Kubernetes for Developers</div>
+    <div class="cert-issuer">Udemy</div>
+  </div>
+</div>
+
+<!-- Achievements -->
+<div class="trophy-section">
+  <h3>🏆 Achievements</h3>
+  <ul class="trophy-list">
+    <li>Recipient of <strong>Star of the Month</strong> award at TCS for exceptional performance on American Airlines project.</li>
+    <li>Led a 3-member team to deliver the <strong>Discount Approval System</strong> ahead of schedule with 95% test coverage.</li>
+    <li>Contributed to handling systems at scale for a $500B e-commerce platform with high throughput and reliability.</li>
+    <li>Certified in multiple cloud and Java-related technologies.</li>
+  </ul>
+</div>
 
 <script>
   // Toggle collapse on click

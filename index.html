@@ -2,285 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rajesh Dudde | Java Architect Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <title>Professional Profile</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0f2027;
-      color: #fff;
-      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background: #f4f4f9;
     }
-    header {
-      background: linear-gradient(90deg, #2c5364, #203a43, #0f2027);
-      padding: 60px 30px;
+    h1 {
       text-align: center;
+      color: #333;
     }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-      animation: fadeInDown 2s ease;
-    }
-    header p {
-      font-size: 1.2em;
-      animation: fadeInUp 2s ease;
-    }
-    section {
-      padding: 50px 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .fade-in {
-      animation: fadeIn 2s ease;
+    .section {
+      margin-bottom: 30px;
     }
     .card {
-      background: #1f2e35;
-      padding: 20px;
+      background: #fff;
       border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
       margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
-    nav a:hover {
-     color: #00ffff;
-     transition: 0.3s ease;
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
     }
-    .project-card {
-      background: #f8f9fa;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 25px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-      position: relative;
-    }
-    .project-card h3 {
-       margin-top: 0;
-       color: #333;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       cursor: pointer;
-    }
-    .project-card p {
-      line-height: 1.6;
-      color: #555;
-      margin-top: 10px;
-    }
-
-    /* Collapse toggle icon */
     .toggle-icon {
-      font-size: 18px;
       font-weight: bold;
-      margin-left: 10px;
+      font-size: 18px;
       transition: transform 0.3s ease;
     }
-    .collapsed .toggle-icon {
-      transform: rotate(-90deg);
+    .toggle-icon.open {
+      transform: rotate(180deg);
     }
-    .collapsed p {
-      display: none;
+    .project-content {
+      display: block;
+      margin-top: 10px;
     }
-
-    /* Skills section */
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-      justify-content: center;
-    }
-    .skill-tab {
-      background-color: #f0f4ff;
-      color: #003366;
-      border: 1px solid #cce0ff;
-      border-radius: 25px;
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: 500;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-    .skill-tab:hover {
-      background-color: #e0ecff;
-      transform: scale(1.05);
-      cursor: default;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-      color: #fff;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-
-    /* Certifications */
-    .certifications-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-    .cert-card {
-      background-color: #f8faff;
-      border-left: 5px solid #4a90e2;
-      padding: 15px 20px;
-      border-radius: 10px;
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.06);
-      transition: 0.3s ease;
-    }
-    .cert-card:hover {
-      transform: scale(1.03);
-      background-color: #e9f2ff;
-    }
-    .cert-title {
-      font-weight: 600;
-      color: #003366;
-      font-size: 16px;
-    }
-    .cert-issuer {
-      font-size: 14px;
-      color: #666;
-      margin-top: 4px;
-    }
-
-    /* Achievements */
-    .trophy-section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #fff8e1;
-      border-left: 5px solid #ffc107;
-      border-radius: 10px;
-      box-shadow: 0 6px 10px rgba(0,0,0,0.05);
-    }
-    .trophy-section h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-      color: #ff9800;
-    }
-    .trophy-list li {
-      margin: 8px 0;
-      color: #444;
-      line-height: 1.5;
-    }
-
-    /* Video */
-    .video-container {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .video-container iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      border-radius: 10px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    ul {
+      margin: 10px 0 0 20px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Rajesh Dudde</h1>
-  <p>Aspiring Java Architect | Java Developer | Cloud Solution Developer | 3.2+ Years Experience</p>
-</header>
+  <h1>Professional Profile</h1>
 
-<nav style="background: #1a1a1a; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000;">
-  <div style="font-size: 1.5em; font-weight: bold; color: #fff;"></div>
-  <div>
-    <a href="https://www.instagram.com/mystic.hawk_10/" target="_blank" style="margin: 0 15px; text-decoration: none; color: #fff; font-weight: 500;">Instagram</a>
-    <a href="https://leetcode.com/RajeshGoud/" target="_blank" style="margin: 0 15px; text-decoration: none; color: #fff; font-weight: 500;">LeetCode</a>
-    <a href="https://github.com/RajeshDudde" target="_blank" style="margin: 0 15px; text-decoration: none; color: #fff; font-weight: 500;">GitHub</a>
-  </div>
-</nav>
+  <!-- Experience Section -->
+  <div class="section">
+    <h2>Experience Highlights</h2>
 
-<section class="fade-in">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>I am a passionate Java Developer with 3.2+ years of hands-on experience in building enterprise-grade, scalable software solutions using Java, Spring Boot, and modern architectural practices. I specialize in designing and implementing robust back-end systems, and solving real-world business challenges.
-
-Over the course of my journey at TCS, I’ve architected and optimized modules for mission-critical systems — from flight allocation systems in the airline industry to order and approval management in a $500B e-commerce platform. </p>
-  </div>
-
-  <h2>Experience Highlights</h2>
-  <div class="card">
-    <strong>TCS - 08/2022 to Present </strong><br><br>
     <div class="card">
-      <strong>American Airlines</strong><br>
-      <div class="project-card">
-        <h3>🛫 Flight Allocation & Crew Configuration System <span class="toggle-icon">▼</span></h3>
-        <p>
-          Designed and developed scalable, modular APIs to manage cabin crew configurations with custom validation pipelines, ensuring data accuracy and system reliability across multiple services.
-          Led performance optimization of complex MongoDB queries, resulting in a 40% boost in responsiveness and throughput.
-          Implemented secure, stateless authentication using JWT and OAuth 2.0 to ensure safe access across distributed service layers.
-          Migrated legacy codebase from Java 8 to Java 21, modernizing the backend while replacing deprecated patterns for future-proof compatibility.
-          Played a key role in containerized deployments using Docker and Kubernetes, improving CI/CD efficiency and ensuring consistent environment parity across dev, staging, and production.
-          Actively contributed to resolving critical vulnerabilities (CVEs), strengthening overall system security posture in production.
-        </p>
+      <div class="project-header" onclick="toggleCard(this)">
+        <strong>Ingram Micro – Notification System</strong>
+        <span class="toggle-icon open">∨</span>
       </div>
-    </div>
-    
-    <div class="card">
-      <strong>Ingram Micro - Xvantage</strong><br>
-      <div class="project-card">
-        <h3>🧩 Vendor Configuration Management System <span class="toggle-icon">▼</span></h3>
-        <p>
-          Architected and implemented an integration layer between vendor systems and the marketplace’s back-office database using Tibco middleware.
-          Designed a robust aggregation and deduplication pipeline to eliminate configuration inconsistencies.
-          Leveraged Google Cloud Bucket for automated, scalable storage and retrieval of processed data.
-          This solution reduced data discrepancies and processing time by 30%, significantly improving data accuracy across the platform.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>📦 Order Management System (OMS) <span class="toggle-icon">▼</span></h3>
-        <p>
-          Played a key role in the design and development of a high-throughput OMS capable of handling over 100,000 concurrent orders.
-          Engineered asynchronous processing flows and optimized PostgreSQL queries using JDBC Template, resulting in an 80% drop in processing time.
-          Applied principles of horizontal scalability and modular service design to improve system resilience and maintainability.
-          Achieved a 55% improvement in overall API response times through fine-tuned indexing and parallel processing strategies.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>✅ Discount Approval System <span class="toggle-icon">▼</span></h3>
-        <p>
-          Designed a rule-driven, modular approval engine to automate discount workflows based on vendor revenue and profitability metrics.
-          Integrated real-time data handling using Pub/Sub and enabled batch processing for Excel-based uploads and external API calls.
-          Built a scalable architecture supporting 64+ distinct approval types with configurable auto/manual logic.
-          Developed a notification subsystem to keep vendors and approvers informed throughout the workflow.
-          Reduced manual effort by 50% and improved turnaround time by 40%, while leading a 3-member team and achieving 95% test coverage.
-        </p>
+      <div class="project-content">
+        <p>Developed a robust notification system capable of sending alerts across email, SMS, and Teams, ensuring timely communication for stakeholders.  
+        Improved message reliability and reduced delays by optimizing Kafka-based event handling.</p>
       </div>
     </div>
 
     <div class="card">
-      <strong>BNSF Railway</strong><br>
-      <div class="project-card">
-        <h3>👨‍💼 HR System <span class="toggle-icon">▼</span></h3>
+      <div class="project-header" onclick="toggleCard(this)">
+        <strong>American Airlines – Customer Management</strong>
+        <span class="toggle-icon open">∨</span>
+      </div>
+      <div class="project-content">
+        <p>Built customer-facing modules with Spring Boot and Angular, streamlining ticket management and flight rescheduling.  
+        Enhanced system resilience using Resilience4j and improved fault tolerance in distributed services.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="project-header" onclick="toggleCard(this)">
+        <strong>BNSF Railway – HR System</strong>
+        <span class="toggle-icon open">∨</span>
+      </div>
+      <div class="project-content">
         <p>
           Spearheaded the development of a robust <strong>notification and reporting system</strong> to deliver real-time alerts and scheduled reports, ensuring timely communication across HR operations.<br><br>
           Designed and optimized <strong>HR planning screens</strong> with advanced <strong>filtering algorithms</strong> to simplify workforce planning and decision-making.<br><br>
@@ -290,69 +94,58 @@ Over the course of my journey at TCS, I’ve architected and optimized modules f
       </div>
     </div>
   </div>
-</section>
 
-<!-- Skills -->
-<h2 class="section-title">Skills</h2>
-<div class="skills-container">
-  <div class="skill-tab">Java 21</div>
-  <div class="skill-tab">Spring Boot</div>
-  <div class="skill-tab">Microservices</div>
-  <div class="skill-tab">Kafka</div>
-  <div class="skill-tab">Cassandra</div>
-  <div class="skill-tab">CockroachDB</div>
-  <div class="skill-tab">PostgreSQL</div>
-  <div class="skill-tab">MongoDB</div>
-  <div class="skill-tab">Docker</div>
-  <div class="skill-tab">Kubernetes</div>
-  <div class="skill-tab">Cloud (GCP, Azure)</div>
-  <div class="skill-tab">Tibco Middleware</div>
-  <div class="skill-tab">Git / CI/CD</div>
-  <div class="skill-tab">Agile / Scrum</div>
-</div>
+  <!-- Skills Section -->
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Languages & Frameworks:</strong> Java 21, Spring Boot, Angular</li>
+        <li><strong>Databases:</strong> CockroachDB, Cassandra, DB2</li>
+        <li><strong>Messaging & Streaming:</strong> Kafka</li>
+        <li><strong>Testing:</strong> Mockito, JUnit</li>
+        <li><strong>Other:</strong> Microservices, Distributed Systems, API Gateway, Resilience4j</li>
+      </ul>
+    </div>
+  </div>
 
-<!-- Certifications -->
-<h2 class="section-title">Certifications</h2>
-<div class="certifications-container">
-  <div class="cert-card">
-    <div class="cert-title">Oracle Certified Professional: Java SE</div>
-    <div class="cert-issuer">Oracle</div>
+  <!-- Certifications Section -->
+  <div class="section">
+    <h2>Certifications</h2>
+    <div class="card">
+      <ul>
+        <li>Oracle Certified Java Programmer</li>
+        <li>Spring Professional Certification</li>
+        <li>Kafka Fundamentals</li>
+      </ul>
+    </div>
   </div>
-  <div class="cert-card">
-    <div class="cert-title">Google Cloud Certified: Associate Cloud Engineer</div>
-    <div class="cert-issuer">Google</div>
-  </div>
-  <div class="cert-card">
-    <div class="cert-title">Spring Professional Certification</div>
-    <div class="cert-issuer">VMware</div>
-  </div>
-  <div class="cert-card">
-    <div class="cert-title">Kubernetes for Developers</div>
-    <div class="cert-issuer">Udemy</div>
-  </div>
-</div>
 
-<!-- Achievements -->
-<div class="trophy-section">
-  <h3>🏆 Achievements</h3>
-  <ul class="trophy-list">
-    <li>Recipient of <strong>Star of the Month</strong> award at TCS for exceptional performance on American Airlines project.</li>
-    <li>Led a 3-member team to deliver the <strong>Discount Approval System</strong> ahead of schedule with 95% test coverage.</li>
-    <li>Contributed to handling systems at scale for a $500B e-commerce platform with high throughput and reliability.</li>
-    <li>Certified in multiple cloud and Java-related technologies.</li>
-  </ul>
-</div>
+  <!-- Achievements Section -->
+  <div class="section">
+    <h2>Achievements</h2>
+    <div class="card">
+      <ul>
+        <li>Successfully delivered high-impact features improving customer experience and operational efficiency.</li>
+        <li>Recognized for driving automation, achieving 85%+ test coverage.</li>
+        <li>Consistently aligned deliverables with organizational and customer-centric goals.</li>
+      </ul>
+    </div>
+  </div>
 
-<script>
-  // Toggle collapse on click
-  document.querySelectorAll('.project-card h3').forEach(header => {
-    header.addEventListener('click', () => {
-      header.parentElement.classList.toggle('collapsed');
-      const icon = header.querySelector('.toggle-icon');
-      icon.textContent = header.parentElement.classList.contains('collapsed') ? '►' : '▼';
-    });
-  });
-</script>
+  <script>
+    function toggleCard(header) {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector(".toggle-icon");
+      if (content.style.display === "none") {
+        content.style.display = "block";
+        icon.classList.add("open");
+      } else {
+        content.style.display = "none";
+        icon.classList.remove("open");
+      }
+    }
+  </script>
 
 </body>
 </html>
